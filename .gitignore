@@ -1,0 +1,63 @@
+# ── Secrets / Environment ──────────────────────────────────────
+# Contains GEMINI_API_KEY, INDIAN_KANOON_API_KEY, etc. Never commit this.
+.env
+.env.*
+!.env.example
+
+# ── Virtual Environment ────────────────────────────────────────
+venv/
+.venv/
+env/
+ENV/
+
+# ── ChromaDB Vector Store ──────────────────────────────────────
+# Local persistent embeddings DB (db_path="./legal_db" in app.py).
+# This is generated data, not source code, and can get large.
+legal_db/
+*.sqlite3
+chroma.sqlite3
+
+# ── Temp / Runtime-generated files ─────────────────────────────
+# Scratch space for files uploaded through the Streamlit file_uploader.
+temp_uploads/
+*.tmp
+
+# ── Python ──────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+.installed.cfg
+*.egg
+
+# ── Streamlit ───────────────────────────────────────────────────
+.streamlit/secrets.toml
+
+# ── Jupyter (in case of notebook-based experimentation) ────────
+.ipynb_checkpoints/
+
+# ── Logs ─────────────────────────────────────────────────────────
+*.log
+logs/
+
+# ── IDE / Editor ──────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ── OS-generated files ──────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Type-checking / test / coverage caches ──────────────────────
+.mypy_cache/
+.pytest_cache/
+.coverage
+htmlcov/
